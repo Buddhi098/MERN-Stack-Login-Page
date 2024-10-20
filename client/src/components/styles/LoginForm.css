@@ -1,0 +1,103 @@
+.login-form {
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: fadeIn 1s ease-in-out;
+    transition: transform 0.3s ease;
+    margin: 0 auto;
+    width: 350px;
+}
+
+.login-form .MuiTextField-root {
+    width: 100%;
+    animation: inputFocus 0.5s ease-in-out;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #007bff;
+}
+
+
+.MuiInputLabel-root.Mui-focused {
+    color: #007bff;
+}
+
+.login-form .MuiButton-root {
+    width: 60%;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    animation: buttonHover 0.5s ease-in-out;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+    margin: 0 auto; 
+}
+
+.login-form .MuiButton-root:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 20px rgba(0, 86, 179, 0.4); 
+}
+
+
+.MuiOutlinedInput-root:focus {
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes inputFocus {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes buttonHover {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-3px);
+    }
+}
+
+
+@media (max-width: 480px) {
+    .login-form {
+        padding: 30px;
+        max-width: 70%;
+        height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .login-form .MuiButton-root {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+}
