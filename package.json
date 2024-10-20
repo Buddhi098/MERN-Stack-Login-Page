@@ -2,6 +2,9 @@
   "name": "mern-app",
   "version": "1.0.0",
   "scripts": {
+    "client-install": "npm install --prefix client", 
+    "server-install": "npm install --prefix server",
+    "install-all": "concurrently \"npm run client-install\" \"npm run server-install\"",
     "client": "npm start --prefix client",
     "server": "npm start --prefix server",
     "dev": "concurrently \"npm run server\" \"npm run client\""
